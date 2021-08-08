@@ -177,11 +177,13 @@ class CampaignServiceTest {
         discountDto.setDiscountName(ShippingConstant.FREE_DELIVERY_CAMPAIGN);
         discountDto.setDiscount(ShippingConstant.SHIPPINGFEE);
 
+        when(deliveryService.getShippingFee()).thenReturn(ShippingConstant.SHIPPINGFEE);
+
         when(deliveryCampaign.getShippingFee(totalAmount, ShippingConstant.SHIPPINGFEE)).thenReturn(discountDto);
 
         DiscountDto deliveryDiscount = campaignService.getDeliveryDiscount(totalAmount);
 
-        assertThat(deliveryDiscount).isEqualTo(discountDto);
+        assertThat(deliveryDiscount.getDiscount()).isEqualTo(discountDto.getDiscount());
     }
 
 }

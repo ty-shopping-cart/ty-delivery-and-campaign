@@ -69,6 +69,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>deliveryCampaign</finalName>
 	</build>
 
 </project>

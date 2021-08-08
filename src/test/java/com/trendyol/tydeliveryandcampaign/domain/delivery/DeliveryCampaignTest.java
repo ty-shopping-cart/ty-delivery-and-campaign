@@ -38,9 +38,7 @@ public class DeliveryCampaignTest {
     @ParameterizedTest
     @ValueSource(doubles = {100.0, 150.0, 200.0})
     void getShippingFee(Double totalAmount){
-        double shippingFee = 4.99;
-        ParameterDto parameterDto = new ParameterDto("key", String.valueOf(shippingFee));
-        when(parameterService.getParameter(any())).thenReturn(parameterDto);
+        double shippingFee = 11.99;
 
         DiscountDto discountDto = deliveryCampaign.getShippingFee(totalAmount,shippingFee);
         assertThat(discountDto.getDiscount()).isEqualTo(shippingFee);
