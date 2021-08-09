@@ -8,6 +8,7 @@ This microservice return shipping fee, category campaign list, coupon discount, 
 * Kafka 2.8.0
 * Postgresql 13
 * Docker
+* Swagger
 
 ## Running the Application
 #### Build the app
