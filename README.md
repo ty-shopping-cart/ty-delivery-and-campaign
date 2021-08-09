@@ -1,4 +1,5 @@
 # Delivery and Campaign
+This microservice return shipping fee, category campaign list, coupon discount, delivery campaign
 
 ## Tech Stack
 * Java JDK 11
